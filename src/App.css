@@ -1,4 +1,41 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, p {
+  margin: 0;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  height: 100%;
+}
+
 .app-split {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
 }

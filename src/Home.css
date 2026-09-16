@@ -1,6 +1,8 @@
 .home-page {
   flex: 1 1 50%;
   min-width: 0;
+  height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,6 +18,7 @@
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  color: #fcb75c;
 }
 
 .home-secondline {

@@ -1,0 +1,108 @@
+.dashboard {
+  display: flex;
+  height: 100%;
+}
+
+.dashboard-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: #123952;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+}
+
+.dashboard-logo-wrap {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 2rem;
+  align-self: flex-start;
+}
+
+.dashboard-logo {
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.dashboard-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-nav-button {
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.dashboard-nav-button-active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dashboard-spacer {
+  flex: 1;
+}
+
+.dashboard-action-button {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.dashboard-publish {
+  margin-bottom: 0.75rem;
+}
+
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.dashboard-topbar {
+  background: #2f6da6;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dashboard-topbar-heading {
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+.dashboard-user-badge {
+  position: absolute;
+  right: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.dashboard-content {
+  flex: 1;
+  background: #1f6f8b;
+  padding: 2rem;
+  color: #ffffff;
+  overflow: auto;
+}
