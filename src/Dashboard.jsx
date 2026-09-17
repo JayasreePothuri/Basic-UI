@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import logo from './assets/enterprise-minds-logo.png'
+import ControlPanel from './ControlPanel.jsx'
 import CoursePanel from './CoursePanel.jsx'
 import UsePanel from './UsePanel.jsx'
 import './Dashboard.css'
@@ -56,11 +57,12 @@ export default function Dashboard({ username, onLogout }) {
 
         <div
           className={
-            activeNav === 'Course' || activeNav === 'Use'
+            activeNav === 'Control' || activeNav === 'Course' || activeNav === 'Use'
               ? 'dashboard-content dashboard-content-tinted'
               : 'dashboard-content'
           }
         >
+          {activeNav === 'Control' && <ControlPanel />}
           {activeNav === 'Course' && <CoursePanel />}
           {activeNav === 'Use' && <UsePanel />}
         </div>

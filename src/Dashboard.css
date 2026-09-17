@@ -4,7 +4,7 @@
 }
 
 .dashboard-sidebar {
-  width: 260px;
+  width: 150px;
   flex-shrink: 0;
   background: #123952;
   display: flex;
