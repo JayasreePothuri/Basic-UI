@@ -1,5 +1,19 @@
+<<<<<<< HEAD
 import './CoursePanel.css'
 
+=======
+import { useState } from 'react'
+import './CoursePanel.css'
+
+const MODEL_OPTIONS = [
+  'gpt-oss-20b',
+  'gpt-oss-120b',
+  'qwen3-32b',
+  'llama-3.3-70b',
+  'mistral-small-24b',
+]
+
+>>>>>>> f36cf34fc4bbd28749d26d1dcd4e0de3b5fdbc0e
 const API_KEYS = [
   {
     name: 'claims-copilot-prod',
@@ -52,6 +66,18 @@ const SUMMARY_CARDS = [
 ]
 
 export default function CoursePanel() {
+<<<<<<< HEAD
+=======
+  const [isCreateOpen, setIsCreateOpen] = useState(false)
+  const [selectedModels, setSelectedModels] = useState(['gpt-oss-20b', 'gpt-oss-120b'])
+
+  function toggleModel(model) {
+    setSelectedModels((prev) =>
+      prev.includes(model) ? prev.filter((m) => m !== model) : [...prev, model]
+    )
+  }
+
+>>>>>>> f36cf34fc4bbd28749d26d1dcd4e0de3b5fdbc0e
   return (
     <div className="course-panel">
       <div className="course-panel-header">
@@ -59,7 +85,15 @@ export default function CoursePanel() {
           Keys inherit the policy of the identity that created them. Scope every key to a project
           and a model allowlist — a key can never exceed the entitlements of its owner.
         </p>
+<<<<<<< HEAD
         <button type="button" className="course-panel-create-btn">
+=======
+        <button
+          type="button"
+          className="course-panel-create-btn"
+          onClick={() => setIsCreateOpen(true)}
+        >
+>>>>>>> f36cf34fc4bbd28749d26d1dcd4e0de3b5fdbc0e
           Create API key
         </button>
       </div>
@@ -113,6 +147,91 @@ export default function CoursePanel() {
           </div>
         ))}
       </div>
+<<<<<<< HEAD
+=======
+
+      {isCreateOpen && (
+        <div className="course-modal-overlay" onClick={() => setIsCreateOpen(false)}>
+          <div className="course-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="course-modal-topbar" />
+
+            <h2 className="course-modal-heading">Create API key</h2>
+            <p className="course-modal-subtext">
+              The key is shown once. It inherits your entitlements and cannot exceed them.
+            </p>
+
+            <label htmlFor="course-key-name" className="course-modal-label">
+              Key name
+            </label>
+            <input
+              id="course-key-name"
+              type="text"
+              className="course-modal-input"
+              placeholder="claims-copilot-prod"
+            />
+
+            <div className="course-modal-label">Model allowlist</div>
+            <div className="course-modal-models">
+              {MODEL_OPTIONS.map((model) => (
+                <button
+                  key={model}
+                  type="button"
+                  className={
+                    selectedModels.includes(model)
+                      ? 'course-modal-model course-modal-model-active'
+                      : 'course-modal-model'
+                  }
+                  onClick={() => toggleModel(model)}
+                >
+                  {model}
+                </button>
+              ))}
+            </div>
+
+            <div className="course-modal-row">
+              <div className="course-modal-field">
+                <label htmlFor="course-rate-limit" className="course-modal-label">
+                  Rate limit
+                </label>
+                <select id="course-rate-limit" className="course-modal-select" defaultValue="600">
+                  <option value="600">600 req / min</option>
+                  <option value="1200">1,200 req / min</option>
+                  <option value="6000">6,000 req / min</option>
+                </select>
+              </div>
+
+              <div className="course-modal-field">
+                <label htmlFor="course-expires" className="course-modal-label">
+                  Expires
+                </label>
+                <select id="course-expires" className="course-modal-select" defaultValue="90">
+                  <option value="30">30 days</option>
+                  <option value="90">90 days</option>
+                  <option value="365">1 year</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="course-modal-actions">
+              <button
+                type="button"
+                className="course-modal-cancel"
+                onClick={() => setIsCreateOpen(false)}
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                className="course-modal-generate"
+                onClick={() => setIsCreateOpen(false)}
+              >
+                Generate key
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+>>>>>>> f36cf34fc4bbd28749d26d1dcd4e0de3b5fdbc0e
     </div>
   )
 }
