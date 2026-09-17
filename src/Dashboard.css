@@ -107,6 +107,10 @@
   overflow: auto;
 }
 
+.dashboard-content-course {
+  background: #140b24;
+}
+
 @media (max-width: 768px) {
   .dashboard {
     flex-direction: column;

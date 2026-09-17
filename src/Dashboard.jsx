@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import logo from './assets/enterprise-minds-logo.png'
+import CoursePanel from './CoursePanel.jsx'
 import './Dashboard.css'
 
 const NAV_ITEMS = ['Overview', 'Control', 'Playground', 'Course', 'Use']
@@ -52,7 +53,15 @@ export default function Dashboard({ username, onLogout }) {
           <div className="dashboard-user-badge">{displayName} Loggedin</div>
         </div>
 
-        <div className="dashboard-content" />
+        <div
+          className={
+            activeNav === 'Course'
+              ? 'dashboard-content dashboard-content-course'
+              : 'dashboard-content'
+          }
+        >
+          {activeNav === 'Course' && <CoursePanel />}
+        </div>
       </div>
     </div>
   )

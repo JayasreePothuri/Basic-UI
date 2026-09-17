@@ -1,0 +1,162 @@
+.course-panel {
+  color: #e4defa;
+  height: 100%;
+}
+
+.course-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.course-panel-intro {
+  margin: 0;
+  max-width: 640px;
+  color: #b8adcf;
+  line-height: 1.5;
+}
+
+.course-panel-create-btn {
+  flex-shrink: 0;
+  background: #ff6a3d;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.course-panel-create-btn:hover {
+  background: #ff8259;
+}
+
+.course-panel-table-wrap {
+  background: #1c1030;
+  border: 1px solid #3a2b57;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.course-panel-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.course-panel-table th {
+  text-align: left;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: #9083ab;
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid #3a2b57;
+}
+
+.course-panel-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #2c2044;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+.course-panel-table tr:last-child td {
+  border-bottom: none;
+}
+
+.course-panel-name {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.course-panel-owner {
+  color: #8b7fa3;
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
+}
+
+.course-panel-key {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  color: #c9c0e0;
+}
+
+.course-panel-status {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.course-panel-status-active {
+  color: #3ddc84;
+}
+
+.course-panel-status-revoked {
+  color: #ff5c5c;
+}
+
+.course-panel-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.course-panel-card {
+  background: #1c1030;
+  border: 1px solid #3a2b57;
+  border-top: 3px solid transparent;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+}
+
+.course-panel-card-purple {
+  border-top-color: #8b5cf6;
+}
+
+.course-panel-card-blue {
+  border-top-color: #38bdf8;
+}
+
+.course-panel-card-orange {
+  border-top-color: #ff9f43;
+}
+
+.course-panel-card-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: #9083ab;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.course-panel-card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.course-panel-card-detail {
+  font-size: 0.85rem;
+  color: #8b7fa3;
+}
+
+@media (max-width: 900px) {
+  .course-panel-header {
+    flex-direction: column;
+  }
+
+  .course-panel-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .course-panel-table-wrap {
+    overflow-x: auto;
+  }
+
+  .course-panel-table {
+    min-width: 640px;
+  }
+}
