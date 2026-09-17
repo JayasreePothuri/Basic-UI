@@ -1,0 +1,241 @@
+.use-panel {
+  color: #e4defa;
+  height: 100%;
+}
+
+.use-panel-ranges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.use-panel-range {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 999px;
+  background: #2b1f52;
+  color: #c9c0e0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.use-panel-range-active {
+  background: #ff6a3d;
+  color: #ffffff;
+}
+
+.use-panel-chart-card {
+  background: #1c1030;
+  border: 1px solid #3a2b57;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.use-panel-chart-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.use-panel-chart-title {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.use-panel-chart-summary {
+  color: #b8adcf;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.use-panel-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 220px;
+}
+
+.use-panel-bar {
+  flex: 1;
+  min-width: 0;
+  background: #8859b4;
+  border-radius: 6px 6px 0 0;
+}
+
+.use-panel-bar-highlight {
+  background: #ff6a3d;
+}
+
+.use-panel-columns {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: start;
+}
+
+.use-panel-table-wrap {
+  background: #1c1030;
+  border: 1px solid #3a2b57;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.use-panel-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.use-panel-table th {
+  text-align: left;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #9083ab;
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid #3a2b57;
+}
+
+.use-panel-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #2c2044;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+.use-panel-table tr:last-child td {
+  border-bottom: none;
+}
+
+.use-panel-model-name {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  color: #ffffff;
+}
+
+.use-panel-cost {
+  color: #ff9f43;
+  font-weight: 600;
+}
+
+.use-panel-headroom {
+  background: #1c1030;
+  border: 1px solid #3a2b57;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.use-panel-headroom-title {
+  margin: 0 0 1.25rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.use-panel-metric {
+  margin-bottom: 1.1rem;
+}
+
+.use-panel-metric:last-child {
+  margin-bottom: 0;
+}
+
+.use-panel-metric-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #d8d0ea;
+  margin-bottom: 0.4rem;
+}
+
+.use-panel-metric-track {
+  height: 8px;
+  background: #2c2044;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.use-panel-metric-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.use-panel-metric-fill-green {
+  background: #3ddc84;
+}
+
+.use-panel-metric-fill-amber {
+  background: #ffb020;
+}
+
+.use-panel-metric-fill-purple {
+  background: #8b5cf6;
+}
+
+.use-panel-metric-fill-red {
+  background: #ff5c5c;
+}
+
+.use-panel-warning {
+  display: flex;
+  gap: 0.85rem;
+  background: #241a3d;
+  border: 1px solid #3a2b57;
+  border-radius: 10px;
+  padding: 1.1rem 1.4rem;
+}
+
+.use-panel-warning-icon {
+  color: #ffb020;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.use-panel-warning-title {
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.use-panel-warning-detail {
+  color: #b8adcf;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .use-panel-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .use-panel-table-wrap {
+    overflow-x: auto;
+  }
+
+  .use-panel-table {
+    min-width: 520px;
+  }
+
+  .use-panel-chart {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .use-panel-ranges {
+    flex-wrap: wrap;
+  }
+
+  .use-panel-chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+}
