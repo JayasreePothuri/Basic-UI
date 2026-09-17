@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import './CoursePanel.css'
-
-=======
 import { useState } from 'react'
 import './CoursePanel.css'
 
@@ -13,7 +9,6 @@ const MODEL_OPTIONS = [
   'mistral-small-24b',
 ]
 
->>>>>>> f36cf34fc4bbd28749d26d1dcd4e0de3b5fdbc0e
 const API_KEYS = [
   {
     name: 'claims-copilot-prod',
@@ -66,8 +61,6 @@ const SUMMARY_CARDS = [
 ]
 
 export default function CoursePanel() {
-<<<<<<< HEAD
-=======
   const [isCreateOpen, setIsCreateOpen] = useState(false)
   const [selectedModels, setSelectedModels] = useState(['gpt-oss-20b', 'gpt-oss-120b'])
 
@@ -77,7 +70,6 @@ export default function CoursePanel() {
     )
   }
 
->>>>>>> f36cf34fc4bbd28749d26d1dcd4e0de3b5fdbc0e
   return (
     <div className="course-panel">
       <div className="course-panel-header">
@@ -85,15 +77,11 @@ export default function CoursePanel() {
           Keys inherit the policy of the identity that created them. Scope every key to a project
           and a model allowlist — a key can never exceed the entitlements of its owner.
         </p>
-<<<<<<< HEAD
-        <button type="button" className="course-panel-create-btn">
-=======
         <button
           type="button"
           className="course-panel-create-btn"
           onClick={() => setIsCreateOpen(true)}
         >
->>>>>>> f36cf34fc4bbd28749d26d1dcd4e0de3b5fdbc0e
           Create API key
         </button>
       </div>
@@ -147,8 +135,6 @@ export default function CoursePanel() {
           </div>
         ))}
       </div>
-<<<<<<< HEAD
-=======
 
       {isCreateOpen && (
         <div className="course-modal-overlay" onClick={() => setIsCreateOpen(false)}>
@@ -231,7 +217,6 @@ export default function CoursePanel() {
           </div>
         </div>
       )}
->>>>>>> f36cf34fc4bbd28749d26d1dcd4e0de3b5fdbc0e
     </div>
   )
 }
