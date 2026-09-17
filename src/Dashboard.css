@@ -107,6 +107,18 @@
   overflow: auto;
 }
 
+.dashboard-overview-content {
+  padding: 0;
+  background: transparent;
+}
+
+.dashboard-empty-state {
+  display: grid;
+  min-height: 100%;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .dashboard-content-tinted {
   background: #140b24;
 }

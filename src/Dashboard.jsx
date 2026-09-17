@@ -2,6 +2,7 @@ import { useState } from 'react'
 import logo from './assets/enterprise-minds-logo.png'
 import CoursePanel from './CoursePanel.jsx'
 import UsePanel from './UsePanel.jsx'
+import { Dashboard as DashboardOverview } from './pages/dashboardData.jsx'
 import './Dashboard.css'
 
 const NAV_ITEMS = ['Overview', 'Control', 'Playground', 'Course', 'Use']
@@ -56,11 +57,17 @@ export default function Dashboard({ username, onLogout }) {
 
         <div
           className={
-            activeNav === 'Course' || activeNav === 'Use'
-              ? 'dashboard-content dashboard-content-tinted'
-              : 'dashboard-content'
+            activeNav === 'Overview'
+              ? 'dashboard-content dashboard-overview-content'
+              : activeNav === 'Course' || activeNav === 'Use'
+                ? 'dashboard-content dashboard-content-tinted'
+                : 'dashboard-content'
           }
         >
+          {activeNav === 'Overview' && <DashboardOverview />}
+          {activeNav !== 'Overview' && activeNav !== 'Course' && activeNav !== 'Use' && (
+            <div className="dashboard-empty-state">{activeNav} is ready for configuration.</div>
+          )}
           {activeNav === 'Course' && <CoursePanel />}
           {activeNav === 'Use' && <UsePanel />}
         </div>
