@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: flex-start;
   padding: 64px;
-  background: #f1eeeb;
+  background: radial-gradient(120% 120% at 75% 30%, #4a2145 0%, #291432 45%, #170b1c 100%);
   box-sizing: border-box;
 }
 
@@ -18,24 +18,25 @@
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #fcb75c;
+  color: #e2933a;
 }
 
 .home-secondline {
   margin: 0 0 24px;
   max-width: 700px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 44px;
   font-weight: 800;
   line-height: 1.15;
-  color: #1a1a1a;
+  color: #ffffff;
 }
 
-.home-thirdline{
+.home-thirdline {
   margin: 0 0 32px;
   max-width: 620px;
   font-size: 16px;
-  line-height: 1.6; 
-  color: #555555;
+  line-height: 1.6;
+  color: #c9bfd1;
 }
 
 .home-button {
@@ -47,10 +48,10 @@
 
 .home-buttons {
   padding: 10px 18px;
-  border: 1px solid #d0d0d8;
+  border: 1px solid #6b4a75;
   border-radius: 999px;
-  background: #8859b4;
-  color: #e3e0e7;
+  background: #8502b4;
+  color: #eae7ec;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -58,6 +59,30 @@
 }
 
 .home-buttons:hover {
-  background: #e9e8ee;
+  background: rgba(255, 255, 255, 0.1);
   border-color: #7c5cff;
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    flex: none;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    padding: 40px 24px;
+  }
+
+  .home-secondline {
+    font-size: 30px;
+  }
+
+  .home-thirdline {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-secondline {
+    font-size: 26px;
+  }
 }

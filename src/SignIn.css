@@ -4,9 +4,9 @@
   height: 100%;
   overflow-y: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  background: #f8f7fa;
+  background: #180f2b;
   padding: 48px 24px 48px 64px;
   box-sizing: border-box;
 }
@@ -14,27 +14,28 @@
 .signin-card {
   width: 100%;
   max-width: 460px;
+  margin: auto 0;
 }
 
-.signin-topbar {
+/* .signin-topbar {
   width: 110px;
   height: 6px;
   border-radius: 999px;
-  /* background: #f2622e; */
+  background: #f2622e;
   margin-bottom: 32px;
-}
+} */
 
 .signin-heading {
   margin: 0 0 12px;
   font-size: 34px;
   font-weight: 800;
-  color: #0a0a0a;
+  color: #ffffff;
 }
 
 .signin-subtext {
   margin: 0 0 28px;
   font-size: 15px;
-  color: #0a0a0a;
+  color: #b3a3d6;
 }
 
 .signin-tabs {
@@ -42,8 +43,8 @@
   gap: 8px;
   padding: 6px;
   margin-bottom: 28px;
-  background: #f0eaea;
-  border: 1px solid #f7f3f3;
+  background: #251845;
+  border: 1px solid #3a2a63;
   border-radius: 14px;
 }
 
@@ -53,15 +54,15 @@
   border: none;
   border-radius: 10px;
   background: transparent;
-  color: #0c0c0c;
+  color: #b3a3d6;
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
 }
 
 .signin-tab-active {
-  background: #fa8334;
-  color: #faf6f6;
+  background: #f2622e;
+  color: #ffffff;
 }
 
 .signin-label {
@@ -71,23 +72,23 @@
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #080808;
+  color: #b3a3d6;
 }
 
 .signin-input {
   width: 100%;
   padding: 14px 16px;
   margin-bottom: 20px;
-  background: #f7f4f4;
-  border: 1px solid #f7efef;
+  background: #150c26;
+  border: 1px solid #3a2a63;
   border-radius: 10px;
-  color: #0c0c0c;
+  color: #ffffff;
   font-size: 15px;
   box-sizing: border-box;
 }
 
 .signin-input::placeholder {
-  color: #0c0c0c;
+  color: #6b5c94;
 }
 
 .signin-row {
@@ -102,19 +103,19 @@
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  color: #0f0f0f;
+  color: #b3a3d6;
   cursor: pointer;
 }
 
 .signin-checkbox input {
-  accent-color: #0f0f0f;
+  accent-color: #f2622e;
   width: 18px;
   height: 18px;
 }
 
 .signin-forgot {
   font-size: 14px;
-  color: #070707;
+  color: #f2622e;
   text-decoration: none;
 }
 
@@ -123,7 +124,7 @@
   padding: 16px;
   border: none;
   border-radius: 10px;
-  background: #fa8334;
+  background: #f2622e;
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
@@ -135,7 +136,7 @@
   align-items: center;
   gap: 16px;
   margin: 28px 0;
-  color: #070707;
+  color: #8a7ab0;
   font-size: 13px;
 }
 
@@ -144,7 +145,7 @@
   content: '';
   flex: 1;
   height: 1px;
-  background: #080808;
+  background: #3a2a63;
 }
 
 .signin-sso {
@@ -173,14 +174,36 @@
   margin-top: 1.5rem;
   text-align: center;
   font-size: 0.9rem;
+  color: #b3a3d6;
 }
 
 .signin-register-button {
   background: none;
   border: none;
-  color: #0a0a0a;
+  color: #f2622e;
   text-decoration: underline;
   cursor: pointer;
   font-size: 0.9rem;
   padding: 0;
+}
+
+@media (max-width: 768px) {
+  .signin-page {
+    flex: none;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    justify-content: center;
+    padding: 40px 24px;
+  }
+
+  .signin-heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 420px) {
+  .signin-tabs {
+    flex-direction: column;
+  }
 }
