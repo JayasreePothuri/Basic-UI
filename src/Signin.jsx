@@ -1,14 +1,42 @@
 import { useState } from 'react'
 import './SignIn.css'
 
+const SIGNIN_URL = 'http://127.0.0.1:4000/api/signin'
+
 function SignIn({ onSignIn }) {
   const [role, setRole] = useState('developer')
   const [keepSignedIn, setKeepSignedIn] = useState(false)
   const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [errors, setErrors] = useState([])
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    onSignIn(email)
+    setErrors([])
+    setIsSubmitting(true)
+
+    try {
+      const res = await fetch(SIGNIN_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password, role }),
+      })
+      const data = await res.json()
+
+      if (res.ok) {
+        onSignIn(email)
+      } else {
+        const messages = data.detail.map((item) =>
+          typeof item === 'string' ? item : item.msg
+        )
+        setErrors(messages)
+      }
+    } catch {
+      setErrors(['Could not reach the server. Is the backend running?'])
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -60,6 +88,8 @@ function SignIn({ onSignIn }) {
             type="password"
             className="signin-input"
             placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
 
@@ -77,8 +107,16 @@ function SignIn({ onSignIn }) {
             </a>
           </div>
 
-          <button type="submit" className="signin-continue">
-            Continue
+          {errors.length > 0 && (
+            <ul className="signin-errors">
+              {errors.map((msg) => (
+                <li key={msg}>{msg}</li>
+              ))}
+            </ul>
+          )}
+
+          <button type="submit" className="signin-continue" disabled={isSubmitting}>
+            {isSubmitting ? 'Signing in…' : 'Continue'}
           </button>
         </form>
 
