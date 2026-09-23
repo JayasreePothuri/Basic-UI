@@ -304,7 +304,9 @@ export default function ControlPanel() {
 
       <div className="control-panel-middle">
         <div className="control-panel-card">
-          <div className="control-panel-label">System prompt</div>
+          <div className="control-panel-label control-panel-label-uppercase">
+  System prompt
+</div>
           <textarea
             className="control-panel-textarea"
             rows={3}
@@ -314,7 +316,7 @@ export default function ControlPanel() {
         </div>
 
         <div className="control-panel-card control-panel-conversation-card">
-          <div className="control-panel-label">Conversation</div>
+          <div className="control-panel-label  control-panel-label-uppercase">Conversation</div>
 
           <div className="control-panel-conversation">
             <div className="control-panel-message">
@@ -357,7 +359,9 @@ export default function ControlPanel() {
               </div>
               <div>
                 <span className="control-panel-stat-label">Cost</span>{' '}
-                <span className="control-panel-stat-value">${STATS.cost}</span>
+<span className="control-panel-stat-value control-panel-cost-value">
+  ${STATS.cost}
+</span>
               </div>
             </div>
             <button

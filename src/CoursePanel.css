@@ -1,6 +1,7 @@
 .course-panel {
-  color: #e4defa;
+  color: #E8D4F9;
   height: 100%;
+  background: #140620;
 }
 
 .course-panel-header {
@@ -14,13 +15,13 @@
 .course-panel-intro {
   margin: 0;
   max-width: 640px;
-  color: #b8adcf;
+  color: #C5A8E0;
   line-height: 1.5;
 }
 
 .course-panel-create-btn {
   flex-shrink: 0;
-  background: #ff6a3d;
+  background: #FA5C2A;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -32,12 +33,12 @@
 }
 
 .course-panel-create-btn:hover {
-  background: #ff8259;
+  background: #FF9D30;
 }
 
 .course-panel-table-wrap {
-  background: #1c1030;
-  border: 1px solid #3a2b57;
+  background: #231043;
+  border: 1px solid #3A1A6E;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 1.5rem;
@@ -52,14 +53,14 @@
   text-align: left;
   font-size: 0.75rem;
   letter-spacing: 0.05em;
-  color: #9083ab;
+  color: #9B7BC0;
   padding: 0.9rem 1.25rem;
-  border-bottom: 1px solid #3a2b57;
+  border-bottom: 1px solid #3A1A6E;
 }
 
 .course-panel-table td {
   padding: 1rem 1.25rem;
-  border-bottom: 1px solid #2c2044;
+  border-bottom: 1px solid #2A1440;
   font-size: 0.95rem;
   vertical-align: middle;
 }
@@ -74,14 +75,14 @@
 }
 
 .course-panel-owner {
-  color: #8b7fa3;
+  color: #9B7BC0;
   font-size: 0.8rem;
   margin-top: 0.15rem;
 }
 
 .course-panel-key {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-  color: #c9c0e0;
+  color: #C5A8E0;
 }
 
 .course-panel-status {
@@ -90,11 +91,11 @@
 }
 
 .course-panel-status-active {
-  color: #3ddc84;
+  color: #009C55;
 }
 
 .course-panel-status-revoked {
-  color: #ff5c5c;
+  color: #DC4041;
 }
 
 .course-panel-summary {
@@ -104,29 +105,29 @@
 }
 
 .course-panel-card {
-  background: #1c1030;
-  border: 1px solid #3a2b57;
+  background: #231043;
+  border: 1px solid #3A1A6E;
   border-top: 3px solid transparent;
   border-radius: 10px;
   padding: 1.25rem 1.5rem;
 }
 
 .course-panel-card-purple {
-  border-top-color: #8b5cf6;
+  border-top-color: #7A4B9E;
 }
 
 .course-panel-card-blue {
-  border-top-color: #38bdf8;
+  border-top-color: #0582C7;
 }
 
 .course-panel-card-orange {
-  border-top-color: #ff9f43;
+  border-top-color: #FF9D30;
 }
 
 .course-panel-card-label {
   font-size: 0.75rem;
   letter-spacing: 0.05em;
-  color: #9083ab;
+  color: #9B7BC0;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
@@ -140,13 +141,15 @@
 
 .course-panel-card-detail {
   font-size: 0.85rem;
-  color: #8b7fa3;
+  color: #9B7BC0;
 }
+
+/* ==================== CREATE API KEY ==================== */
 
 .course-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(10, 6, 18, 0.65);
+  background: rgba(20, 6, 32, 0.75);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,7 +162,7 @@
   max-width: 520px;
   max-height: 90vh;
   overflow-y: auto;
-  background: #1c1030;
+  background: #1A0A2E;
   border: 1px solid #4a2f6b;
   border-radius: 16px;
   padding: 32px;
@@ -170,7 +173,7 @@
   width: 90px;
   height: 5px;
   border-radius: 999px;
-  /* background: #161616; */
+  background: #FA5C2A;
   margin-bottom: 24px;
 }
 
@@ -186,7 +189,7 @@
   margin: 0 0 24px;
   font-size: 14px;
   line-height: 1.5;
-  color: #b8adcf;
+  color: #C5A8E0;
 }
 
 .course-modal-label {
@@ -196,15 +199,15 @@
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #9083ab;
+  color: #C5A8E0;
 }
 
 .course-modal-input {
   width: 100%;
   padding: 12px 14px;
   margin-bottom: 20px;
-  background: #150c22;
-  border: 1px solid #3a2b57;
+  background: #10071F;
+  border: 1px solid #7A4B9E;
   border-radius: 8px;
   color: #ffffff;
   font-size: 14px;
@@ -226,16 +229,16 @@
   padding: 8px 16px;
   border-radius: 999px;
   border: 1px solid #4a2f6b;
-  background: #150c22;
-  color: #c9c0e0;
+  background: #10071F;
+  color: #C5A8E0;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
 }
 
 .course-modal-model-active {
-  background: #ff6a3d;
-  border-color: #ff6a3d;
+  background: #FA5C2A;
+  border-color: #FA5C2A;
   color: #ffffff;
 }
 
@@ -253,8 +256,8 @@
 .course-modal-select {
   width: 100%;
   padding: 12px 14px;
-  background: #150c22;
-  border: 1px solid #3a2b57;
+  background: #10071F;
+  border: 1px solid #3A1A6E;
   border-radius: 8px;
   color: #ffffff;
   font-size: 14px;
@@ -265,7 +268,7 @@
 .course-modal-select:focus {
   outline: none;
   border-color: #4f7fff;
-  box-shadow: 0 0 0 2px rgba(79, 127, 255, 0.5);
+  box-shadow: 0 0 0 2px rgba(0, 96, 204, 0.5);
 }
 
 .course-modal-actions {
@@ -279,7 +282,7 @@
   border-radius: 8px;
   border: 1px solid #4a2f6b;
   background: transparent;
-  color: #e4defa;
+  color: #E8D4F9;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -289,7 +292,7 @@
   padding: 10px 20px;
   border-radius: 8px;
   border: none;
-  background: #ff6a3d;
+  background: #FA5C2A;
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
@@ -297,8 +300,10 @@
 }
 
 .course-modal-generate:hover {
-  background: #ff8259;
+  background: #FF9D30;
 }
+
+/* ==================== RESPONSIVE ==================== */
 
 @media (max-width: 900px) {
   .course-panel-header {
